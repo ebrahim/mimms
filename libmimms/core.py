@@ -30,7 +30,7 @@ from urlparse import urlparse
 
 from . import libmms
 
-VERSION="3.2.1"
+VERSION="3.2.2"
 
 class Timeout(Exception):
   "Raised when a user-defined timeout has occurred."
@@ -242,7 +242,7 @@ def run(argv):
       print
     print >> sys.stderr, "Download aborted by user."
   except libmms.Error, e:
-    print >> sys.stderr, "libmms error:", e.message
+    print >> sys.stderr, "libmms error:", e
   else:
     if not options.quiet:
       print
